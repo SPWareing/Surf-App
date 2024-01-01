@@ -1,0 +1,25 @@
+.header-div {
+    border: 1px solid rgba(211,211,211,0.5);
+    width: 80%;
+    height: 50px;
+    align-items: top;
+    display: flex;
+    text-align: center;
+    margin: 0, auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    top: 0.1em;
+    
+}
+
+.header-div > * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(52, 52, 52, 1);
+    padding: 0;
+    width: 50%;
+    margin: auto;
+    font-size: 2em;
+}
+
+.header-div>*:hover {
+    color: #f1f1f1;
+}   

@@ -1,0 +1,14 @@
+.counter-div{
+    width: 100%
+}
+
+
+.counter-btn {
+    all: unset;
+    
+}
+
+.counter-btn:hover >* {
+    cursor: pointer;
+    color: red;
+}
