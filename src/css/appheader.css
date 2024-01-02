@@ -1,25 +1,32 @@
 .header-div {
-    border: 1px solid rgba(211,211,211,0.5);
-    width: 80%;
-    height: 50px;
-    align-items: top;
     display: flex;
-    text-align: center;
-    margin: 0, auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    top: 0.1em;
-    
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.header-div > * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgba(52, 52, 52, 1);
-    padding: 0;
-    width: 50%;
-    margin: auto;
-    font-size: 2em;
+.header-div h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #333;
 }
 
-.header-div>*:hover {
-    color: #f1f1f1;
-}   
+.header-div nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header-div nav a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-div nav a:hover {
+    color: #007BFF;
+}

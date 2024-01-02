@@ -1,20 +1,36 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import AppHeader from './components/appheader';
-import AppSidebar from './components/appsidebar';
-import AppCounter from './components/appcounter';
+
 import WindTable from "./components/windtable";
-import { WindTableProps, WindData } from './components/windtable';
+import {  WindData } from './components/windtable';
+import ButtonSwitch from './components/buttonSwitch';
+import { Location } from './components/buttonSwitch'; 
 
 function App() {
   const [windData, setWindData] = useState<WindData | undefined>();
   const [windError, setWindError] = useState(null);
+  const [buttonClicked, setButtonClicked] = useState<Location>(
+    {latitude: 51.1173, longitude: -4.2049}
+  );
+
+ const funcButtonClicked = (location: Location) => {
+      
+      setButtonClicked(location);
+      console.log(buttonClicked);
+    
+    
+    } 
+
+   useEffect(() => {
+    console.log(buttonClicked);}, [buttonClicked]
+    );
 
     useEffect(() => {
-        
-            fetch("https://marine-api.open-meteo.com/v1/marine?latitude=51.1173&longitude=-4.2049&hourly=wave_height,wave_period,wind_wave_direction&forecast_days=1", {
+            const {latitude, longitude} = buttonClicked;
+            fetch(`https://marine-api.open-meteo.com/v1/marine?latitude=${latitude}&longitude=${longitude}&hourly=wave_height,wave_period,wind_wave_direction&forecast_days=1`, {
               method: "GET"
             })
             .then(response => response.json())
@@ -26,13 +42,13 @@ function App() {
       
           
           ;
-    }, []);
+    }, [buttonClicked]);
   return (
     <div className='app-div'>
-      <AppSidebar/>
-      <div style={{width:"100%"}}>
-      <AppHeader label="My App"/>
-      <AppCounter/>
+      <ButtonSwitch onClick={funcButtonClicked}/>
+      <div style={{width:"100%", paddingBottom: "1em"}}>
+      <AppHeader label={buttonClicked} style={{marginBottom: "1em"}}/>
+      
       <WindTable windData={windData}/>
       </div>
     </div>
