@@ -11,4 +11,6 @@ Basic surf app with some local Devon surf spots
 - Woolacombe
 - Bantham
 
+## Azure
 
+- Deployed as static Web App
