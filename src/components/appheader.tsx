@@ -6,17 +6,19 @@ type AppHeaderProps = {
     label : {latitude: number, longitude: number};
     color? : string
     style?: React.CSSProperties;
+    sitename?: string;
 
 }
 
 
-const AppHeader = ({label , color, style}: AppHeaderProps) => {
+const AppHeader = ({label , color, style, sitename}: AppHeaderProps) => {
     
     
     
     return (
         <div className='header-div' style={style}>
-            <h1 style={{color: color}}>Wind Data</h1>
+            
+            {sitename? <h1>{sitename}</h1> : <h1 style={{color: color}}>Wind Data</h1>}
             <h1>Latitude: {label.latitude} Longitude: {label.longitude}</h1>
         </div>
     );
