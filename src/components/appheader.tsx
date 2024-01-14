@@ -19,7 +19,10 @@ const AppHeader = ({label , color, style, sitename}: AppHeaderProps) => {
         <div className='header-div' style={style}>
             
             {sitename? <h1>{sitename}</h1> : <h1 style={{color: color}}>Wind Data</h1>}
-            <h1>Latitude: {label.latitude} Longitude: {label.longitude}</h1>
+            <div>
+                <h1>Latitude: {label.latitude}</h1> 
+                <h1>Longitude: {label.longitude}</h1>
+                </div>
         </div>
     );
 };

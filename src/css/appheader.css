@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding: 20px;
+    padding: 1em;
     background-color: #f8f9fa;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
     position: sticky;
@@ -12,24 +12,17 @@
 }
 
 
-@media screen and (max-width: 450px) {
-    .header-div {
-        flex-direction: column;
-        gap: 10px;
-        min-width: 250px;
-    }
-    
-}
+
 
 .header-div h1 {
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 1.5em;
     color: #333;
 }
 
 .header-div nav {
     display: flex;
-    gap: 20px;
+    gap: 2em;
 }
 
 .header-div nav a {
@@ -40,4 +33,19 @@
 
 .header-div nav a:hover {
     color: #007BFF;
+}
+
+@media screen and (max-width : 450px) {
+    .header-div {
+        flex-direction: column;
+        gap: 0.5em;
+        width: 100%;
+        justify-content: center;
+        
+    }
+
+    .header-div h1 {
+        font-size: 1.2em;
+    }
+    
 }

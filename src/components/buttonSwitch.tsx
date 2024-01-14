@@ -32,7 +32,7 @@ interface ButtonSwitchProps {
 const ButtonSwitch = ({onClick}: ButtonSwitchProps) => {
     return (
         <div className='container'>
-            SURF SPOTS
+            <h3>SURF SPOTS</h3>
             {BUTTONLIST.map((button) => (
                 <button key={button.id} onClick={()=> onClick(button)}>{button.label} </button>
                 

@@ -18,3 +18,11 @@
   justify-content: flex-end;
   padding: 10px 0px;
 }
+
+@media screen and (max-width: 450px) {
+  .app-div {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+}
