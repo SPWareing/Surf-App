@@ -6,6 +6,7 @@
     flex-direction: column;
     gap: 1em ;
     background: #f9f9f9;
+    min-width: 250px;
    
 }
 
@@ -18,7 +19,7 @@
 
 .table-responsive th,
 .table-responsive td {
-    width: 100px; /* adjust this value as needed */
+    width: 25%; /* adjust this value as needed */
     overflow: hidden; /* this hides content that exceeds the cell width */
     text-overflow: ellipsis; /* this displays an ellipsis ('...') for overflow content */
     white-space: nowrap; /* this prevents the content from wrapping to the next line */
@@ -30,19 +31,33 @@
     background-color: #007BFF;
     color: #fff;
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     padding: 10px 5px;
     text-align: center;
     border-radius: 0.5em 0 0.5em 0 ;
-    
-    
-    
+   
+      
 
 }
 
 .table-responsive td {
     text-align: center;
-    width: 35px;
+    width: 10%;
+}
+
+
+@media screen and (max-width: 400px) {
+    .table-responsive th
+     {
+        font-size: 0.4em;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        
+    }
+    .table-responsive td {
+        font-size: 0.8em;
+    }
+    
 }
 
 .table-responsive button {
@@ -51,19 +66,27 @@
     color: #fff;
     background-color: #007BFF;
     border: none;
-    padding: 10px 20px;
+    padding: 0.5em 1em;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1em;
     transition: background-color 0.3s ease;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 0.5em;
     width: 25%;
     margin:auto
 }
 
 .table-responsive button:hover, :focus {
     background-color: #ddd;
+}
+
+@media screen and (max-width: 450px) {
+    .table-responsive button {
+        font-size: 0.6em;
+        transform: rotate(50deg);
+    }
+    
 }
 
 .table-responsive div {

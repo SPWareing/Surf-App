@@ -12,20 +12,42 @@
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   }
 
+  @media screen and (max-width: 450px) {
+    .container > * {
+    
+      transform: rotate(270deg);
+      font-size: 0.6em;
+      
+      
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100vh;
+      gap: 0.5em;
+      width: 15%;
+      min-width: 100px;
+    }
+    
+  }
+
 .container > * {
     display: inline-block;
   font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   background-color: #007BFF;
   border: none;
-  padding: 10px 20px;
+  padding: 0.5em 1em;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1.1em;
   transition: background-color 0.3s ease;
   cursor: pointer;
-  border-radius: 4px;
-  width: 90%;
+  border-radius: 0.5em;
+  width: max(125px, 90%);
+  max-width: 125px;
   margin: auto;
 }
 
