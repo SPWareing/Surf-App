@@ -69,8 +69,8 @@ export interface WindTableProps {
 
 const WindTable = ({surfData, windData}: WindTableProps) => {
     
-    const [filter, setFilter] = useState(true);
-    const [showColumns, setShowColumns] = useState(true);
+    const [filter, setFilter] = useState(false);
+    const [showColumns, setShowColumns] = useState(false);
     
     
     if(surfData && windData) {
