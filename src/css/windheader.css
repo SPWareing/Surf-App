@@ -1,0 +1,33 @@
+
+.windheader-div {
+    display:flex;
+    flex-direction:row;
+    align-self: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%
+
+}
+
+.header-icon {
+    display: none
+}
+
+p
+ {
+    display: block;}
+
+@media screen and (max-width: 450px) {
+
+    p {
+        display: none;
+    }
+
+    .header-icon {
+        display: block;
+        width: 75%;
+        height: 75%;
+        margin:auto
+    }
+    
+}

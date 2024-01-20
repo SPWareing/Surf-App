@@ -1,0 +1,9 @@
+.speed {
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 400px) {
+    .speed {
+        display: none;
+    }
+}

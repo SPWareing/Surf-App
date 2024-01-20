@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { SlClock } from "react-icons/sl";
 
 import WindDirectionArrow from './windArrowDirection';
+import WindHeader from './windHeader';
 import '../css/windtable.css';
 
 
@@ -96,12 +98,12 @@ const WindTable = ({surfData, windData}: WindTableProps) => {
           </div>
            <table >
             <tr>
-              <th style={{width:"20px"}}> Time</th>
-              <th> Wave Height</th>
-              <th> Wave Period</th>
-              <th> Wind Direction</th>
-              {showColumns &&<th> Temperature</th>}
-              {showColumns &&<th> Surface Pressure</th>}
+              <th style={{width:"10%"}}> <SlClock style={{width: "75%", height: "75%", margin: "auto"}}/></th>
+              <th><WindHeader text="Wave Height" icon="wave"/></th>
+              <th><WindHeader text="Wave Period" icon="period"/></th>
+              <th> <WindHeader text="Wind Direction" icon="wind"/></th>
+              {showColumns &&<th><WindHeader text="Temperature"  icon="temp"/></th>}
+              {showColumns &&<th><WindHeader text="Surface Pressure" icon="pressure"/></th>}
             </tr>
             {dateObject.map((t, index) => (
               <tr key={index}>
