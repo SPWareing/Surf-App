@@ -14,3 +14,7 @@ Basic surf app with some local Devon surf spots
 ## Azure
 
 - Deployed as static Web App
+
+----
+
+Link to site: [Surf App](https://thankful-grass-0cba85403.4.azurestaticapps.net/)
