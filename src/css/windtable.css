@@ -94,6 +94,7 @@
         font-size: 0.6em;
         word-wrap: break-word;
         overflow-wrap: break-word;
+        height: 2em;
         
     }
 
@@ -115,11 +116,13 @@
         font-size: 0.4em;
         word-wrap: break-word;
         overflow-wrap: break-word;
+        height: max(10px, 1em )
         
     }
 
     .table-responsive td {
         font-size: 0.8em;
+        height: max(10px, 1em )
     }
     
 }

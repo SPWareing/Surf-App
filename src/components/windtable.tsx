@@ -93,12 +93,13 @@ const WindTable = ({surfData, windData}: WindTableProps) => {
 
     return (
         <div className='table-responsive'>
-          <div ><button onClick={()=>setFilter(!filter)}>{filter? "Hourly": "3hr"}</button>
-          <button onClick={()=>setShowColumns(!showColumns)}>{filter? "Hide Extra": "Show Extra"}</button>
+          <div >
+            <button onClick={()=>setFilter(!filter)}>{filter? "Hourly": "3 Hourly"}</button>
+            <button onClick={()=>setShowColumns(!showColumns)}>{showColumns? "Hide Extra": "Show Extra"}</button>
           </div>
            <table >
             <tr>
-              <th style={{width:"10%"}}> <SlClock style={{width: "75%", height: "75%", margin: "auto"}}/></th>
+              <th style={{width:"10%"}}> <SlClock style={{width: "2em", height: "2em", margin: "auto"}}/></th>
               <th><WindHeader text="Wave Height" icon="wave"/></th>
               <th><WindHeader text="Wave Period" icon="period"/></th>
               <th> <WindHeader text="Wind Direction" icon="wind"/></th>

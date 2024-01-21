@@ -19,6 +19,8 @@ p
 
 @media screen and (max-width: 450px) {
 
+    
+
     p {
         display: none;
     }
