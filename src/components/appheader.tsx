@@ -7,12 +7,14 @@ type AppHeaderProps = {
     color? : string
     style?: React.CSSProperties;
     sitename?: string;
+    image?: string;
 
 }
 
 
 const AppHeader = ({label , color, style, sitename}: AppHeaderProps) => {
     
+
     
     
     return (
@@ -23,6 +25,7 @@ const AppHeader = ({label , color, style, sitename}: AppHeaderProps) => {
                 <h1>Latitude: {label.latitude}</h1> 
                 <h1>Longitude: {label.longitude}</h1>
                 </div>
+            
         </div>
     );
 };

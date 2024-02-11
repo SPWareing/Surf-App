@@ -61,7 +61,8 @@ function App() {
       <AppHeader 
         label={buttonClicked.location} 
         style={{marginBottom: "1em"} }
-        sitename={buttonClicked.label} />
+        sitename={buttonClicked.label}
+         />
       
       <WindTable surfData={surfData} windData={windData}/>
       

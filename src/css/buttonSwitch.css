@@ -37,7 +37,10 @@
 
 .container > *:hover, :focus {
     background-color: #ddd;
+    animation: squish 200ms ease-in-out 10ms;
 }
+
+
 
 @media screen and (max-width: 450px) {
     
@@ -57,13 +60,26 @@
     display: none;
     flex: 0;
   }
+
   .container > button {
     font-size: 0.5em;
     flex: 1;
     max-width: auto;
     word-wrap: break-word; /* Break the words at the end of the line */
-  overflow-wrap: break-word;
+    overflow-wrap: break-word; 
   
+  }
+
   
+}
+@keyframes squish {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scaleX(0.9);
+  }
+  100% {
+    transform: scale(1);
   }
 }

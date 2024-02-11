@@ -20,6 +20,7 @@
 .table-responsive th,
 .table-responsive td {
     width: 25%; /* adjust this value as needed */
+    
     overflow: hidden; /* this hides content that exceeds the cell width */
     text-overflow: ellipsis; /* this displays an ellipsis ('...') for overflow content */
     white-space: nowrap; /* this prevents the content from wrapping to the next line */
@@ -35,7 +36,7 @@
     padding: 1em 0.5em;
     text-align: center;
     border-radius: 0.5em  0.5em  ;
-    height: min( 20px, 1.5em)
+    height: min( 20px, 1.2em)
    
       
 
