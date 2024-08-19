@@ -10,15 +10,20 @@
     top: 0;
     z-index: 1000;
     height: 8em;
-    border-radius:  0.5em 0.5em;
+    border-radius:  0.4em 0.4em;
 }
 
 
-
+.header-div img {
+    max-width: 100%; /* Ensures the image does not exceed the container's width */
+    max-height: 100%; /* Ensures the image does not exceed the container's height */
+    width: auto; /* Maintains the aspect ratio */
+    height: auto; /* Maintains the aspect ratio */
+  }
 
 .header-div h1 {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: #333;
 }
 
@@ -59,6 +64,8 @@
     .header-div h1 {
         font-size: 0.8em;
     }
+
+    
     
 }
 

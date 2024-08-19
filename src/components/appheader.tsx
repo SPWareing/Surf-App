@@ -12,7 +12,7 @@ type AppHeaderProps = {
 }
 
 
-const AppHeader = ({label , color, style, sitename}: AppHeaderProps) => {
+const AppHeader = ({label , color, style, sitename, image}: AppHeaderProps) => {
     
 
     
@@ -25,7 +25,7 @@ const AppHeader = ({label , color, style, sitename}: AppHeaderProps) => {
                 <h1>Latitude: {label.latitude}</h1> 
                 <h1>Longitude: {label.longitude}</h1>
                 </div>
-            
+           {image &&<img src={image} alt="surf spot" />}
         </div>
     );
 };
