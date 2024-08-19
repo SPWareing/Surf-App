@@ -95,7 +95,7 @@ const WindTable = ({surfData, windData}: WindTableProps) => {
         <div className='table-responsive'>
           <div >
             <button onClick={()=>setFilter(!filter)}>{filter? "Hourly": "3 Hourly"}</button>
-            <button onClick={()=>setShowColumns(!showColumns)}>{showColumns? "Hide Extra": "Show Extra"}</button>
+            <button onClick={()=>setShowColumns(!showColumns)}>{showColumns? "Hide Detail": "Show Detail"}</button>
           </div>
            <table >
             <tr>
