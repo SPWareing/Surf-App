@@ -15,8 +15,9 @@
   bottom: 0;
   background-color: #f8f9fa;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   padding: 1em 0px;
+  flex-direction: row;
 }
 
 @media screen and (max-width: 450px) {

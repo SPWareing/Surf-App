@@ -80,6 +80,7 @@ function App() {
       </div>
       <div className='footer'>
         <span style={{ paddingRight: '10px' }}>(2023) Open-Meteo.com Weather API.</span>
+        <span>Images: <a href='https://unsplash.com/'>Unsplash</a>  </span>
       </div>
 
     </div>

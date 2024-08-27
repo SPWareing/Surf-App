@@ -18,10 +18,13 @@
 
 @media screen and (max-width: 400px) {
 
-    
+    .windarrowDirection-div {
+        flex-direction: column;
+    }
 
     .speed {
         display: none;
+        
        
     }
 }
