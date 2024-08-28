@@ -43,14 +43,6 @@ function App() {
     loadData();
 
 
-    /*fetch(`https://marine-api.open-meteo.com/v1/marine?latitude=${latitude}&longitude=${longitude}&hourly=wave_height,wave_period,wind_wave_direction&forecast_days=1`, {
-      method: "GET"
-    })
-      .then(response => response.json())
-      .then(data => { console.log(data); setSurfData(data); })
-      .catch(error => { console.log(error); setWindError(error); })
-      ;*/
-
     fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,pressure_msl,surface_pressure,wind_speed_10m&forecast_days=1`,
       {
         method: "GET"
