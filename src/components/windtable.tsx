@@ -108,7 +108,7 @@ const WindTable = ({surfData, windData}: WindTableProps) => {
             </tr>
             {dateObject.map((t, index) => (
               <tr key={index}>
-                <td>{t.getUTCHours()}</td>
+                <td>{t.getHours()}</td>
                 <td>{`${wave_height[index]}m`}</td>
                 <td>{`${wave_period[index]}s`}</td>
                 <td title={wind_wave_direction[index].toString() + hourly_units.wind_wave_direction} >
