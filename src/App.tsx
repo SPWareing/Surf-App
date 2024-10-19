@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import AppHeader from './components/appheader';
 import WindTable from "./components/windtable";
-import { SurfData, WindData } from './components/windtable';
+import { SurfData, WindData } from './utils/types/dtotypes';
 import ButtonSwitch from './components/buttonSwitch';
 import { ButtonProps } from './components/buttonSwitch';
 
@@ -20,12 +20,9 @@ function App() {
   const funcButtonClicked = (button: ButtonProps) => {
 
     setButtonClicked(button);
-  }
+  };
 
-  useEffect(() => {
-    console.log(buttonClicked);
-  }, [buttonClicked]
-  );
+
 
   useEffect(() => {
     const { location } = buttonClicked;
@@ -35,26 +32,31 @@ function App() {
       const response = await fetch(`https://marine-api.open-meteo.com/v1/marine?latitude=${latitude}&longitude=${longitude}&hourly=wave_height,wave_period,wind_wave_direction&forecast_days=1`, {
         method: "GET"
       })
-      if (response.ok) {        
+      if (response.ok) {
         const data = await response.json();
         setSurfData(data);
       }
     }
+
+
+
+    const loadWindData = async () => {
+
+      const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,pressure_msl,surface_pressure,wind_speed_10m&forecast_days=1`,
+        {
+          method: "GET"
+        });
+
+      if (response.ok) {
+        const data = await response.json();
+        setWindData(data);
+      }
+
+
+    };
     loadData();
+    loadWindData();
 
-
-    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,pressure_msl,surface_pressure,wind_speed_10m&forecast_days=1`,
-      {
-        method: "GET"
-      })
-      .then(response => response.json())
-      .then(data => { console.log(data); setWindData(data); })
-      .catch(error => { console.log(error); setWindError(error); })
-
-
-
-
-      ;
   }, [buttonClicked]);
   return (
     <div className='app-div'>

@@ -1,21 +1,19 @@
 .sidebar-div {
-    all:unset;
-    border: 0.1em none #333;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    height: 200px;
-    padding: 0.5em;
-    padding-top: 1em;
-    
-    
+  all: unset;
+  border: 0.1em none #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: 200px;
+  padding: 0.5em;
+  padding-top: 1em;
 }
 
-
-.sidebar-div:hover, .sidebar-div:focus {
-    background-color: rgba(0,0,0,0.1);
+.sidebar-div:hover,
+.sidebar-div:focus {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-div > * {
-    color: rgba(52, 52, 52, 1);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(52, 52, 52, 1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

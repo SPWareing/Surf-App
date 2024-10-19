@@ -8,13 +8,13 @@ interface WindDirectionArrowProps {
 }
 
 const WindDirectionArrow: React.FC<WindDirectionArrowProps> = ({ direction, speed }) => {
-  
+
   return (
     <div className="windarrowDirection-div">
-      
-      <WiDirectionUp style={{transform: `rotate(${direction}deg) scaleY(-1)`, flex: "2", height: "2em", width: "2em"}} />
+
+      <WiDirectionUp style={{ transform: `rotate(${direction}deg) scaleY(-1)`, flex: "2", height: "2em", width: "2em" }} />
       <p className="speed">{speed} km/h </p>
-      
+
     </div>
   );
 };

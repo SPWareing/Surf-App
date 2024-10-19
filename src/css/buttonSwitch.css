@@ -3,26 +3,24 @@
 }
 
 .container {
-    width: max(150px, 20%);
-    height: max(150px, 20%);
-    padding: 0.2em 0.2em 1em 0.2em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    align-items: center;
-    justify-content: center;    
-    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
-  }
-
-  
+  width: max(150px, 20%);
+  height: max(150px, 20%);
+  padding: 0.2em 0.2em 1em 0.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
 
 .container > button {
-    display: inline-block;
-  font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+  display: inline-block;
+  font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
-  background-color: #007BFF;
+  background-color: #007bff;
   border: none;
   padding: 0.5em 1em;
   text-align: center;
@@ -35,25 +33,20 @@
   margin: auto;
 }
 
-.container > *:hover, :focus {
-    background-color: #ddd;
-    animation: squish 700ms ease-in-out 300ms;
+.container > *:hover,
+:focus {
+  background-color: #ddd;
+  animation: squish 200ms ease-in-out 100ms;
 }
 
-
-
 @media screen and (max-width: 450px) {
-    
-    
   .container {
-    
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     width: auto;
     gap: 0.2em;
-    
   }
 
   h3 {
@@ -66,18 +59,15 @@
     flex: 1;
     max-width: auto;
     word-wrap: break-word; /* Break the words at the end of the line */
-    overflow-wrap: break-word; 
-  
+    overflow-wrap: break-word;
   }
-
-  
 }
 @keyframes squish {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scaleX(0.7);
+    transform: scaleX(0.8);
   }
   100% {
     transform: scale(1);
