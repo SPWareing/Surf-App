@@ -30,7 +30,7 @@ function TableHeader({ text, icon }: TableHeaderProps) {
 
   return (
     <div className="windheader-div">
-      <Icon className="header-icon" />
+      <Icon className="header-icon" data-testid={`icon-${icon}`} />
       <p>{text}</p>
     </div>
   );
