@@ -26,7 +26,7 @@ const AppHeader = ({ label, color, style, sitename, image }: AppHeaderProps) => 
                 <h1>Longitude: {label.longitude}</h1>
 
             </div>
-            {image && <img src={image} alt="surf spot" />}
+            {image && <img src={image} alt="surf spot" loading='lazy' />}
         </div>
     );
 };

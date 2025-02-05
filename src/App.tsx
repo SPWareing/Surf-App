@@ -5,13 +5,13 @@ import AppHeader from './components/appheader';
 import WindTable from "./components/windtable";
 import { SurfData, WindData } from './utils/types/dtotypes';
 import ButtonSwitch from './components/buttonSwitch';
-import { ButtonProps } from './components/buttonSwitch';
+import { ButtonProps } from './utils';
 
 
 function App() {
   const [surfData, setSurfData] = useState<SurfData | undefined>();
   const [windData, setWindData] = useState<WindData | undefined>();
-
+  //eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [windError, setWindError] = useState(null);
   const [buttonClicked, setButtonClicked] = useState<ButtonProps>({ location: { latitude: 51.1173, longitude: -4.2049 } } as ButtonProps
 

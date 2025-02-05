@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { SlClock } from "react-icons/sl";
-import { SurfData, HourlyUnits, Hourly, WindData } from '../utils/types/dtotypes';
+import { SurfData, WindData } from '../utils/types/dtotypes';
 import WindDirectionArrow from './windArrowDirection';
 import WindHeader from './windHeader';
 import '../css/windtable.css';
-
-
 
 
 export interface WindTableProps {
@@ -22,9 +20,9 @@ const WindTable = ({ surfData, windData }: WindTableProps) => {
 
 
   if (surfData && windData) {
-
+    //eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { latitude, longitude, hourly: { time, wave_height, wave_period, wind_wave_direction }, hourly_units } = surfData
-
+    //eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { hourly: { temperature_2m, pressure_msl, surface_pressure, wind_speed_10m } } = windData;
 
     let dateObject;

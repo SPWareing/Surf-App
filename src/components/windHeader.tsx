@@ -1,7 +1,7 @@
 // Import your styles and any icons you need
 
 import '../css/windheader.css';
-import { WiThermometer, WiBarometer, WiTsunami, WiWindy } from "react-icons/wi";// replace 'IconName' with the actual icon you want to use
+import { WiThermometer, WiBarometer, WiWindy } from "react-icons/wi";// replace 'IconName' with the actual icon you want to use
 import { GiBigWave } from "react-icons/gi";
 import { TiWaves } from "react-icons/ti";
 

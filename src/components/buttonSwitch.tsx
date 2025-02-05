@@ -1,23 +1,8 @@
 import React from 'react';
 import '../css/buttonSwitch.css';
+import { ButtonProps, ButtonSwitchProps } from '../utils';
 
-
-
-export interface ButtonProps {
-    id: number;
-    label: string;
-    location: Location;
-    direction?: number;
-    image?: string;
-
-}
-
-export interface Location {
-    latitude: number;
-    longitude: number;
-}
-
-const BUTTONLIST = [
+const BUTTONLIST: ButtonProps[] = [
     { id: 1, label: "Saunton Sands", location: { latitude: 51.1173, longitude: -4.2049, direction: 90 }, image: "https://images.unsplash.com/photo-1561911023-ee4e7211fc4c" },
     { id: 2, label: "Croyde Bay", location: { latitude: 51.13, longitude: -4.2245, direction: 90 }, image: "https://images.unsplash.com/photo-1606742316322-3180327b7289" },
     { id: 3, label: "Bantham", location: { latitude: 50.2779, longitude: -3.8689, direction: 45 }, image: "https://images.unsplash.com/photo-1694943698629-7b166e0e6069" },
@@ -25,14 +10,13 @@ const BUTTONLIST = [
 
 ]
 
-interface ButtonSwitchProps {
-    onClick: (button: ButtonProps) => void;
-}
+
 
 const ButtonSwitch = ({ onClick }: ButtonSwitchProps) => {
     return (
         <div className='container'>
-            <h3>SURF SPOTS</h3>
+            <div className='containerChild'><h3>SURF SPOTS</h3></div>
+
             {BUTTONLIST.map((button) => (
                 <button key={button.id} onClick={() => onClick(button)}>{button.label} </button>
 
