@@ -1,6 +1,7 @@
 {
-  "name": "type-app",
-  "version": "0.1.0",
+  "name": "surf_app",
+  "description": "This is a surf app that shows the weather and surf conditions for a given location.",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@fluent/react": "^0.15.2",
